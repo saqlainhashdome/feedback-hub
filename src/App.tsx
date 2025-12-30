@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import Inbox from "./pages/Inbox";
 import FeedbackDetail from "./pages/FeedbackDetail";
 import Analytics from "./pages/Analytics";
+import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import { DashboardLayout } from "./components/layout/DashboardLayout";
 
@@ -34,7 +35,7 @@ const App = () => (
             <Route path="voicebox" element={<Inbox />} />
             <Route path="analytics" element={<Analytics />} />
             <Route path="reports" element={<Analytics />} />
-            <Route path="settings" element={<Dashboard />} />
+            <Route path="settings" element={<Settings />} />
           </Route>
           
           <Route path="*" element={<NotFound />} />
