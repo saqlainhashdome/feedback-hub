@@ -1,4 +1,5 @@
 import { QRCodeGenerator } from "@/components/dashboard/QRCodeGenerator";
+import { QRPoster } from "@/components/dashboard/QRPoster";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -39,6 +40,12 @@ export default function Settings() {
 
         {/* QR Code Tab */}
         <TabsContent value="qrcode" className="space-y-6">
+          {/* Poster Section */}
+          <QRPoster 
+            businessId="acme-coffee" 
+            businessName="Acme Coffee Shop" 
+          />
+          
           <div className="grid gap-6 lg:grid-cols-2">
             <QRCodeGenerator 
               businessId="acme-coffee" 
