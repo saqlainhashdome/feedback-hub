@@ -7,6 +7,17 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 
+// Senditbox logo as SVG data URL (MessageSquare icon with brand colors)
+const SENDITBOX_LOGO = `data:image/svg+xml,${encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#0d9488"/>
+  <path d="M25 30 h50 a10 10 0 0 1 10 10 v25 a10 10 0 0 1 -10 10 h-35 l-15 12 v-12 a10 10 0 0 1 -10 -10 v-25 a10 10 0 0 1 10 -10" fill="white"/>
+  <circle cx="38" cy="52" r="5" fill="#0d9488"/>
+  <circle cx="55" cy="52" r="5" fill="#0d9488"/>
+  <circle cx="72" cy="52" r="5" fill="#0d9488"/>
+</svg>
+`)}`;
+
 interface QRCodeGeneratorProps {
   businessId?: string;
   businessName?: string;
@@ -112,6 +123,14 @@ export function QRCodeGenerator({
               includeMargin={true}
               bgColor="#ffffff"
               fgColor="#0f172a"
+              imageSettings={{
+                src: SENDITBOX_LOGO,
+                x: undefined,
+                y: undefined,
+                height: 40,
+                width: 40,
+                excavate: true,
+              }}
             />
           </div>
           <p className="text-sm text-muted-foreground text-center">
